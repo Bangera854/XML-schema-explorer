@@ -162,15 +162,18 @@ Hover `amount` → tooltip shows `minInclusive: 0.01, totalDigits: 10`.
 
 ---
 
-*****New Update***** 
-🔍 Live Search – Ctrl+F to filter nodes by name, type, or attribute; matches are clearly marked with a badge and ancestors auto‑expand.
+*****v1.2.2 - Older version***** 
+🔍  **Live search** – real‑time filtering with `Ctrl+F`, match badges, and auto‑expansion.
+
+### Added Update 1.2.3
+- **Cross‑file resolution** – `xs:include` and `xs:import` are now resolved recursively. Click‑to‑jump works across multiple files.
+- **Live search / filter** – Press `Ctrl+F` to filter the tree by name, type, or attribute (added in v1.2.2, now fully integrated).
 
 
 ## 🗺️ Roadmap / Upcoming Features
 
 The following features are planned for future releases:
 
-- **Cross‑file resolution** – Full support for `xs:include` and `xs:import` (merge referenced schemas).
 - **Graphical diagram** – Visual schema overview using Mermaid.
 - **Sample XML generation** – Right‑click any complex type to generate a sample XML instance.
 - **Enhanced `xs:any` tooltips** – Display namespace and processContents details.
