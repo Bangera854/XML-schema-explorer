@@ -1,4 +1,4 @@
-# XSD Schema Explorer
+# XML Schema Explorer
 
 > A clean, interactive tree view for `.xsd` files — instantly understand complex schemas with click-to-jump navigation, hover tooltips, and constraint visualization.
 
@@ -7,7 +7,7 @@
 ## Features
 
 ### 🌳 Interactive Schema Tree
-A dedicated **XSD Explorer** panel in the Activity Bar shows the complete logical structure of your schema:
+A dedicated **XML Explorer** panel in the Activity Bar shows the complete logical structure of your schema:
 
 - **Global Elements** — all top-level `xs:element` declarations
 - **Complex Types** — all `xs:complexType` definitions with their full hierarchy
@@ -30,7 +30,7 @@ Hover over any tree node to see:
 ### ♻️ Live Refresh
 - **Auto-refresh on save** — tree updates automatically when you save the XSD file
 - **Debounced live refresh** — tree also updates 1.5 seconds after you stop typing
-- **Manual refresh** — click the refresh button or run `XSD Schema Explorer: Refresh Tree`
+- **Manual refresh** — click the refresh button or run `XML Schema Explorer: Refresh Tree`
 
 ### 📊 Occurrence Indicators
 Elements clearly show their cardinality:
@@ -46,7 +46,7 @@ Elements clearly show their cardinality:
 
 1. **Install** the extension from the VS Code Marketplace
 2. **Open** any `.xsd` file
-3. Click the **XSD Explorer icon** in the Activity Bar (left sidebar)
+3. Click the **XML Explorer icon** in the Activity Bar (left sidebar)
 4. The **Schema Tree** panel opens with your schema structure
 
 No configuration needed. No Java. No external APIs. 100% local.
@@ -57,8 +57,8 @@ No configuration needed. No Java. No external APIs. 100% local.
 
 | Command | Description |
 |---------|-------------|
-| `XSD Schema Explorer: Refresh Tree` | Force-refresh the schema tree |
-| `XSD Schema Explorer: Collapse All` | Collapse all nodes |
+| `XML Schema Explorer: Refresh Tree` | Force-refresh the schema tree |
+| `XML Schema Explorer: Collapse All` | Collapse all nodes |
 
 ---
 
@@ -86,7 +86,7 @@ No configuration needed. No Java. No external APIs. 100% local.
 | `xs:extension` (inheritance) | ✅ |
 | `xs:restriction` + all facets | ✅ |
 | `xs:annotation` / `xs:documentation` | ✅ |
-| `xs:include` / `xs:import` | ✅ (listed) |
+| `xs:include` / `xs:import` | ✅ (resolved and merged) |
 | `xs:any` | ✅ |
 
 ---
@@ -114,6 +114,7 @@ No configuration needed. No Java. No external APIs. 100% local.
 
 Open a large `payment-service.xsd` and instantly see:
 
+
 ```
 Schema: payment-service.xsd
 ├── Global Elements (3)
@@ -136,6 +137,7 @@ Schema: payment-service.xsd
     └── ...
 ```
 
+
 Click `customer` → cursor jumps straight to `<xs:element name="customer"...>`.
 Hover `amount` → tooltip shows `minInclusive: 0.01, totalDigits: 10`.
 
@@ -149,9 +151,9 @@ Hover `amount` → tooltip shows `minInclusive: 0.01, totalDigits: 10`.
 
 ---
 
-## Why XSD Schema Explorer?
+## Why XML Schema Explorer?
 
-| | XSD Treeview | Red Hat XML | **XSD Schema Explorer** |
+| | XSD Treeview | Red Hat XML | **XML Schema Explorer** |
 |--|--|--|--|
 | Dedicated tree view | Basic | ❌ | ✅ Full |
 | Click-to-jump | ❌ | ❌ | ✅ |
@@ -162,13 +164,17 @@ Hover `amount` → tooltip shows `minInclusive: 0.01, totalDigits: 10`.
 
 ---
 
-*****v1.2.2 - Older version***** 
-🔍  **Live search** – real‑time filtering with `Ctrl+F`, match badges, and auto‑expansion.
+**v1.2.2 - Older version**  
+🔍 **Live search** – real‑time filtering with `Ctrl+F`, match badges, and auto‑expansion.
 
 ### Added Update 1.2.3
 - **Cross‑file resolution** – `xs:include` and `xs:import` are now resolved recursively. Click‑to‑jump works across multiple files.
 - **Live search / filter** – Press `Ctrl+F` to filter the tree by name, type, or attribute (added in v1.2.2, now fully integrated).
 
+### v1.2.5
+Minor updates.
+
+---
 
 ## 🗺️ Roadmap / Upcoming Features
 
@@ -179,8 +185,6 @@ The following features are planned for future releases:
 - **Enhanced `xs:any` tooltips** – Display namespace and processContents details.
 
 ---
-
-
 
 ## License
 
