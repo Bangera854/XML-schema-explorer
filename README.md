@@ -174,6 +174,10 @@ Hover `amount` → tooltip shows `minInclusive: 0.01, totalDigits: 10`.
 ### v1.2.6
 Minor updates.
 
+> Note:
+> Versions `v1.2.4` and `v1.2.5` briefly used the incorrect name "XML Xchema Explorer" due to a typo.  
+> The extension functionality was unchanged. Newer versions restore the correct naming: "XSD Schema".
+
 ---
 
 ## 🗺️ Roadmap / Upcoming Features
